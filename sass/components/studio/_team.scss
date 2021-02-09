@@ -1,0 +1,111 @@
+/* ======================TEAM=================== */
+
+.section .section-title,
+.section-comand .section-title {
+  color: var(--text-black-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+}
+
+.section .section-title.name-page {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.section-comand .section-title.name-page {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-comand {
+  background-color: var(--background-second-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-list > .team-item {
+  flex-basis: calc((100% - 30px * 4) / 4);
+}
+
+.team-item {
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--text-wite-color);
+  margin-left: 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.section-comand .section-title.name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+
+.section-comand .comand-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.team-text-container {
+  padding: 30px;
+}
+
+.network-list {
+  display: inline-flex;
+  margin-top: 16px;
+}
+
+.network-link:focus,
+.network-link:hover {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  background-color: var(--text-accent);
+  border-radius: 50%;
+}
+
+.network-link:focus .network-icon,
+.network-link:hover .network-icon {
+  fill: #ffffff;
+}
+
+.network-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.network-link {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  transition: background-color 250ms var(--cubic), fill 250ms var(--cubic);
+}
+
+.network-icon {
+  width: 22px;
+  height: 22px;
+  fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ======================END TEAM=================== */
