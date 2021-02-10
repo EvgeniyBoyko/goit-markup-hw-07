@@ -1,0 +1,11 @@
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  &-features {
+    padding-bottom: 0px;
+  }
+
+  &-comand {
+    background-color: var(--background-second-color);
+  }
+}
