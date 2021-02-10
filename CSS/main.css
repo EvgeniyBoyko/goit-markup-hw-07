@@ -95,6 +95,180 @@ textarea {
   background-color: var(--text-accent);
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 250ms var(--cubic);
+}
+
+.backdrop-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  padding: 40px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.backdrop-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: border 250ms var(--cubic);
+}
+
+.icon-exit {
+  width: 11px;
+  height: 11px;
+  transition: fill 250ms var(--cubic);
+}
+
+.backdrop-btn:hover .icon-exit,
+.backdrop-btn:focus .icon-exit {
+  fill: var(--text-accent);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.backdrop-form-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--text-black-color);
+}
+
+/* ========== Modal =============== */
+.backdrop-form-text {
+  display: block;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: var(--text-color);
+  margin-top: 12px;
+}
+
+.backdrop-list {
+  display: block;
+}
+
+.backdrop-imput {
+  width: 100%;
+  height: 40px;
+  padding-left: 44px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border 250ms var(--cubic);
+}
+
+.backdrop-imput:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+.svg-form-container {
+  position: relative;
+}
+
+.backdrop-checkbox-bg:checked + .checkbox-text::before {
+  background-color: var(--text-accent);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  border-color: var(--text-accent);
+  border-radius: 2px;
+}
+
+.checkbox-text {
+  display: inline-block;
+  margin-left: 9px;
+  margin-top: 20px;
+  vertical-align: top;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.171;
+  letter-spacing: 0.03em;
+  color: var(--text-color);
+}
+
+.checkbox-text::before {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  content: '';
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid var(--text-black-color);
+  border-radius: 2px;
+  background-size: contain;
+}
+
+.checkbox-link {
+  color: var(--text-accent);
+}
+
+.checkbox-link:focus {
+  color: var(--text-accent);
+}
+
+.backdrop-icon-container {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  transition: fill 250ms var(--cubic);
+}
+
+.backdrop-imput:focus + .backdrop-icon-container {
+  fill: var(--text-accent);
+}
+
+.backdrop-textarea {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  margin-top: 4px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transition: border-radius 250ms var(--cubic);
+}
+
+.backdrop-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.backdrop-textarea:hover, .backdrop-textarea:focus {
+  outline: none;
+  border: 1px solid #2196f3;
+  border-radius: 4px;
+}
+
+/* ========== END Modal =============== */
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -407,10 +581,6 @@ textarea {
   margin-top: 16px;
 }
 
-.network-item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .network-link {
   width: 44px;
   height: 44px;
@@ -418,15 +588,11 @@ textarea {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  transition: background-color 250ms var(--cubic), fill 250ms var(--cubic);
+  transition: background-color 250ms var(--cubic);
 }
 
 .network-link:focus, .network-link:hover {
-  display: flex;
-  width: 44px;
-  height: 44px;
   background-color: var(--text-accent);
-  border-radius: 50%;
 }
 
 .network-icon {
@@ -491,180 +657,6 @@ textarea {
 }
 
 /* ============== END CLIENTS =================== */
-/* ========== Modal =============== */
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: all 250ms var(--cubic);
-}
-
-.backdrop-window {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
-  padding: 40px;
-  background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-
-.backdrop-btn {
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: border 250ms var(--cubic);
-}
-
-.icon-exit {
-  width: 11px;
-  height: 11px;
-  transition: fill 250ms var(--cubic);
-}
-
-.backdrop-btn:hover .icon-exit,
-.backdrop-btn:focus .icon-exit {
-  fill: var(--text-accent);
-}
-
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.backdrop-form-name {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--text-black-color);
-}
-
-.backdrop-form-text {
-  display: block;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.166;
-  letter-spacing: 0.01em;
-  color: var(--text-color);
-  margin-top: 12px;
-}
-
-.backdrop-list {
-  display: block;
-}
-
-.backdrop-imput {
-  width: 100%;
-  height: 40px;
-  padding-left: 44px;
-  margin-top: 4px;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  transition: border 250ms var(--cubic);
-}
-
-.backdrop-imput:focus {
-  outline: none;
-  border: 1px solid #2196f3;
-  border-radius: 4px;
-}
-
-.svg-form-container {
-  position: relative;
-}
-
-.backdrop-checkbox-bg:checked + .checkbox-text::before {
-  background-color: var(--text-accent);
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  border-color: var(--text-accent);
-  border-radius: 2px;
-}
-
-.checkbox-text {
-  display: inline-block;
-  margin-left: 9px;
-  margin-top: 20px;
-  vertical-align: top;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.171;
-  letter-spacing: 0.03em;
-  color: var(--text-color);
-}
-
-.checkbox-text::before {
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  content: '';
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-  border: 2px solid var(--text-black-color);
-  border-radius: 2px;
-  background-size: contain;
-}
-
-.checkbox-link {
-  color: var(--text-accent);
-}
-
-.checkbox-link:focus {
-  color: var(--text-accent);
-}
-
-.backdrop-icon-container {
-  position: absolute;
-  top: 50%;
-  left: 14px;
-  transform: translateY(-50%);
-  transition: fill 250ms var(--cubic);
-}
-
-.backdrop-imput:focus + .backdrop-icon-container {
-  fill: var(--text-accent);
-}
-
-.backdrop-textarea {
-  width: 448px;
-  height: 120px;
-  padding: 12px 16px;
-  margin-top: 4px;
-  border-radius: 4px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  transition: border-radius 250ms var(--cubic);
-}
-
-.backdrop-textarea::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.backdrop-textarea:hover, .backdrop-textarea:focus {
-  outline: none;
-  border: 1px solid #2196f3;
-  border-radius: 4px;
-}
-
-/* ========== END Modal =============== */
 .footer-address-container {
   width: 270px;
   padding: 60px 0;
@@ -698,10 +690,15 @@ textarea {
 .link-map {
   color: var(--text-wite-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link-map:hover, .link-map:focus {
   color: var(--text-accent);
+}
+
+.link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-page .link:focus,

@@ -10,6 +10,8 @@
 // Components
 
 @import './components/button';
+@import './components/modal';
+@import './components/form';
 
 // layout
 
@@ -21,7 +23,6 @@
 @import './layout/studio/work';
 @import './layout/studio/team';
 @import './layout/studio/clients';
-@import './layout/studio/modal';
 @import './layout/studio/footer';
 
 // portfolio

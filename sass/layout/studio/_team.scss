@@ -65,10 +65,6 @@
   margin-top: 16px;
 }
 
-.network-item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .network-link {
   width: 44px;
   height: 44px;
@@ -77,15 +73,11 @@
   align-items: center;
   border-radius: 50%;
 
-  transition: background-color 250ms var(--cubic), fill 250ms var(--cubic);
+  transition: background-color 250ms var(--cubic);
 
   &:focus,
   &:hover {
-    display: flex;
-    width: 44px;
-    height: 44px;
     background-color: var(--text-accent);
-    border-radius: 50%;
   }
 }
 
