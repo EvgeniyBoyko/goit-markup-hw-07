@@ -4,13 +4,6 @@
   align-items: flex-start;
 }
 
-.soshial-link-container {
-  width: 270px;
-  padding: 60px 0;
-  align-items: flex-start;
-  margin-left: 70px;
-}
-
 .footer-page {
   background-color: var(--footer-bg-color);
   text-decoration: none;
@@ -22,10 +15,6 @@
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
   }
-}
-
-.logo-color.footer {
-  color: var(--text-wite-color);
 }
 
 .link-map {
@@ -54,55 +43,6 @@
 
 .footer-list-item {
   margin-top: 8px;
-}
-
-.soshial-link-title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--text-wite-color);
-}
-
-.soshial-link-list {
-  display: flex;
-}
-
-.soshial-link-item {
-  margin-top: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
-}
-
-.soshial-link {
-  width: 44px;
-  height: 44px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    display: flex;
-    width: 44px;
-    height: 44px;
-    background-color: #2196f3;
-    border-radius: 50%;
-  }
-}
-
-.soshial-link .icon {
-  width: 22px;
-  height: 22px;
-  fill: var(--text-wite-color);
 }
 
 .subscription-container {
