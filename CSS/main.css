@@ -64,15 +64,29 @@ textarea {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.footer-page > .container {
-  display: flex;
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -374,8 +388,8 @@ textarea {
 
 /* ========== END Modal =============== */
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .section-features {
@@ -495,42 +509,69 @@ textarea {
 }
 
 /* =====================END Second NAVIGATION=============== */
-/* =================HERO================  */
-.hero-page .hero-title {
-  color: var(--text-wite-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.hero-page {
+.hero {
+  width: 100%;
   background-color: #c4c4c4;
   margin: 0 auto;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
-  max-width: 1600px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/Img-png.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_bg-mobile.jpg);
 }
 
-/* =================END HERO================  */
-/* =====================FEATURES================ */
+@media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero .box {
+    background-image: url(../images/hero/hero_bg-mobile@2x.jpg);
+  }
+}
+
+.hero__title {
+  color: var(--text-wite-color);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.615;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_bg-tablet.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_bg-tablet@2x.jpg);
+  }
+}
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_bg-desktop@2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero_bg-desktop.jpg);
+  }
+}
+
 .section .section-title.features {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-}
-
-.features-item {
-  margin-left: 30px;
-  flex-basis: calc((100% - 30px * 4) / 4);
 }
 
 .features-item:before {
@@ -543,14 +584,14 @@ textarea {
   height: 120px;
 }
 
-.features-text {
-  margin-top: 10px;
+@media screen and (max-width: 767px) {
+  .features-item:not(:first-child) {
+    margin-top: 30px;
+  }
 }
 
-.features-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
+.features-text {
+  margin-top: 10px;
 }
 
 .bgf-img1::before {
@@ -569,7 +610,32 @@ textarea {
   background-image: url(../images/features/bg4.svg);
 }
 
-/* =====================FEATURES================ */
+@media screen and (min-width: 768px) {
+  .features-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-top: -30px;
+  }
+  .features-item {
+    margin-left: 30px;
+    margin-top: 30px;
+    flex-basis: calc((100% - 30px * 2) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-list {
+    margin-top: 0;
+    margin-left: -30px;
+  }
+  .features-item {
+    margin-left: 30px;
+    margin-top: 0;
+    flex-basis: calc((100% - 30px * 4) / 4);
+  }
+}
+
 /* ================ WORK ============== */
 .work-title > .work-item {
   flex-basis: calc((100% - 30px * 3) / 3);
