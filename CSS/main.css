@@ -640,7 +640,12 @@ textarea {
   }
 }
 
-/* ================ WORK ============== */
+@media screen and (max-width: 1199px) {
+  .section-work {
+    display: none;
+  }
+}
+
 .work-title > .work-item {
   flex-basis: calc((100% - 30px * 3) / 3);
   margin-left: 30px;
