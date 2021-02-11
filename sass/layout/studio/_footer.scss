@@ -1,7 +1,5 @@
 .footer-address-container {
   width: 270px;
-  padding: 60px 0;
-  align-items: flex-start;
 }
 
 .footer-page {
@@ -10,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 60px 0;
 
   & .link.rgba {
     color: rgba(255, 255, 255, 0.6);
@@ -47,19 +46,16 @@
 
 .subscription-container {
   width: 570px;
-  padding: 60px 0;
 }
 
 .subscription-form {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .subscription-input {
   flex-grow: 1;
   height: 50px;
-  margin-top: 20px;
+  // margin-top: 20px;
   padding-left: 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -67,6 +63,7 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background: var(--footer-bg-color);
+  color: var(--text-wite-color);
 
   transition: border 250ms var(--cubic);
 
@@ -75,13 +72,6 @@
     border: 1px solid #2196f3;
     border-radius: 4px;
   }
-}
-
-.footer-btn {
-  margin-left: 12px;
-  margin-top: 20px;
-  padding: 10px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .subscription-send {
