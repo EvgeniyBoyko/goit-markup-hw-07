@@ -71,6 +71,10 @@ textarea {
   padding-right: 15px;
 }
 
+.footer-page > .container {
+  display: flex;
+}
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
