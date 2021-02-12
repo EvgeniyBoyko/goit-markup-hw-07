@@ -43,7 +43,6 @@
 
 .subscription-container {
   width: 100%;
-  max-width: 450px;
 }
 
 .subscription-form {
@@ -52,6 +51,7 @@
 
 .subscription-input {
   width: 100%;
+  max-width: 450px;
   height: 50px;
   padding-left: 16px;
 
@@ -79,7 +79,7 @@
 @media screen and (min-width: 768px) {
   .footer__box {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     flex-basis: calc((50% - 45px) / 2);
@@ -105,5 +105,9 @@
 
   .soshial-link-container {
     margin-bottom: 0;
+  }
+
+  .subscription-form {
+    display: flex;
   }
 }

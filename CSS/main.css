@@ -233,6 +233,13 @@ textarea {
   text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-btn {
+    margin-left: 12px;
+    margin-top: 0;
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -767,7 +774,6 @@ textarea {
 
 .subscription-container {
   width: 100%;
-  max-width: 450px;
 }
 
 .subscription-form {
@@ -776,6 +782,7 @@ textarea {
 
 .subscription-input {
   width: 100%;
+  max-width: 450px;
   height: 50px;
   padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -801,7 +808,7 @@ textarea {
 @media screen and (min-width: 768px) {
   .footer__box {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     flex-basis: calc((50% - 45px) / 2);
   }
@@ -822,6 +829,9 @@ textarea {
   }
   .soshial-link-container {
     margin-bottom: 0;
+  }
+  .subscription-form {
+    display: flex;
   }
 }
 
