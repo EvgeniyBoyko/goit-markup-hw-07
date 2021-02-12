@@ -37,22 +37,14 @@
 // FOOTER
 
 .soshial-link-container {
-  width: 270px;
-}
-
-.soshial-link-title {
-  margin-bottom: 20px;
-
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--text-wite-color);
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .soshial-link-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .soshial-link-item {

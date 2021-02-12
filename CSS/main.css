@@ -71,10 +71,6 @@ textarea {
   padding-right: 15px;
 }
 
-.footer-page > .container {
-  display: flex;
-}
-
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -127,6 +123,17 @@ textarea {
   }
 }
 
+.footer__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-wite-color);
+}
+
 .network-list {
   display: inline-flex;
   margin-top: 16px;
@@ -159,21 +166,14 @@ textarea {
 }
 
 .soshial-link-container {
-  width: 270px;
-}
-
-.soshial-link-title {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.142;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--text-wite-color);
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .soshial-link-list {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .soshial-link-item {
@@ -230,8 +230,7 @@ textarea {
 }
 
 .footer-btn {
-  margin-left: 12px;
-  margin-top: 0;
+  text-align: center;
 }
 
 .backdrop {
@@ -301,7 +300,6 @@ textarea {
   color: var(--text-black-color);
 }
 
-/* ========== Modal =============== */
 .backdrop-form-text {
   display: block;
   font-weight: normal;
@@ -409,7 +407,6 @@ textarea {
   border-radius: 4px;
 }
 
-/* ========== END Modal =============== */
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -724,22 +721,20 @@ textarea {
   }
 }
 
-.footer-address-container {
-  width: 270px;
-}
-
 .footer-page {
   background-color: var(--footer-bg-color);
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 60px 0;
 }
 
 .footer-page .link.rgba {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+}
+
+.footer-address-container {
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 .link-map {
@@ -771,15 +766,16 @@ textarea {
 }
 
 .subscription-container {
-  width: 570px;
+  width: 100%;
+  max-width: 450px;
 }
 
 .subscription-form {
-  display: flex;
+  text-align: center;
 }
 
 .subscription-input {
-  flex-grow: 1;
+  width: 100%;
   height: 50px;
   padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -802,7 +798,33 @@ textarea {
   fill: var(--text-wite-color);
 }
 
-/* =================== END FOOTER ===================== */
+@media screen and (min-width: 768px) {
+  .footer__box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-basis: calc((50% - 45px) / 2);
+  }
+  .footer-address-container {
+    width: 50%;
+  }
+  .soshial-link-container {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__box {
+    flex-wrap: nowrap;
+  }
+  .footer-address-container {
+    margin-bottom: 0;
+  }
+  .soshial-link-container {
+    margin-bottom: 0;
+  }
+}
+
 .portfolio-main-container {
   background-color: var(--text-wite-color);
 }
