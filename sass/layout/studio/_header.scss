@@ -1,3 +1,24 @@
+.page-header {
+  position: relative;
+  border-bottom: 1px solid #ececec;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .site-nav {
+    display: none;
+  }
+
+  .second-nav {
+    display: none;
+  }
+}
+
 // .page-header {
 //   display: flex;
 //   justify-content: center;

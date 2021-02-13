@@ -17,7 +17,7 @@
   </head>
   <body>
     <!--Шапка-->
-    <!-- <header class="page-header">
+    <header class="page-header">
       <div class="header__container container">
         <nav class="nav-header">
           <a href="/" class="logo">Web<span class="logo__color">Studio</span></a>
@@ -28,7 +28,11 @@
             <li class="nav-item"><a href="" class="link">Контакты</a></li>
           </ul>
         </nav>
-
+        <button type="button" class="burger__open">
+          <svg class="burger__open--svg" width="40px" height="40px">
+            <use class="svg" href="./images/sprite.svg#menu"></use>
+          </svg>
+        </button>
         <ul class="second-nav">
           <li class="nav-item">
             <a href="" class="link">
@@ -48,7 +52,7 @@
           </li>
         </ul>
       </div>
-    </header> -->
+    </header>
 
     <main>
       <!-- Герой -->
@@ -615,7 +619,7 @@
       </div>
     </footer>
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="backdrop-window">
         <div class="backdrop-contant">
           <form class="backdrop-form">
@@ -669,12 +673,9 @@
           </button>
         </div>
       </div>
-    </div> -->
+    </div>
 
-    <script src="./js/modal.js"></script>
-
-    <!-- <div class="burger" data-menu>
-      <button type="button" class="">svg.burger__icon</button>
+    <div class="burger" data-menu>
       <ul class="burger__nav--list">
         <li class="burger__nav--item">
           <a href="" class="burger__nav--link current">Студия</a>
@@ -686,6 +687,40 @@
           <a href="" class="burger__nav--link">Контакты</a>
         </li>
       </ul>
-    </div> -->
+
+      <div class="burger__second">
+        <ul class="burger__second--list">
+          <li class="burger__second--item">
+            <a href="#" class="second__link--tell">+38 096 111 11 11</a>
+          </li>
+          <li class="burger__second--item">
+            <a href="#" class="second__link">info@devstudio.com</a>
+          </li>
+        </ul>
+
+        <ul class="burger__network">
+          <li class="burger__network--item">
+            <a href="" class="burger__network--link">Instagram</a>
+          </li>
+          <li class="burger__network--item">
+            <a href="" class="burger__network--link">Twitter</a>
+          </li>
+          <li class="burger__network--item">
+            <a href="" class="burger__network--link">Facebook</a>
+          </li>
+          <li class="burger__network--item">
+            <a href="" class="burger__network--link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
+      <button type="button" class="burger__close">
+        <svg class="burger__close--img" width="20px" height="20px">
+          <use class="svg" href="./images/sprite.svg#close-black"></use>
+        </svg>
+      </button>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
