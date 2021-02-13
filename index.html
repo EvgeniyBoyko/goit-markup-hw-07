@@ -25,10 +25,10 @@
           <ul class="site-nav">
             <li class="nav-item"><a href="./index.html" class="link current">Студия</a></li>
             <li class="nav-item"><a href="./portfolio.html" class="link">Портфолио</a></li>
-            <li class="nav-item"><a href="" class="link">Контакты</a></li>
+            <li class="nav-item"><a href="#" class="link">Контакты</a></li>
           </ul>
         </nav>
-        <button type="button" class="burger__open">
+        <button type="button" data-menu-open class="burger__open">
           <svg class="burger__open--svg" width="40px" height="40px">
             <use class="svg" href="./images/sprite.svg#menu"></use>
           </svg>
@@ -675,7 +675,7 @@
       </div>
     </div>
 
-    <div class="burger" data-menu>
+    <div class="burger is-menu-hidden" data-menu>
       <ul class="burger__nav--list">
         <li class="burger__nav--item">
           <a href="" class="burger__nav--link current">Студия</a>
@@ -714,7 +714,7 @@
         </ul>
       </div>
 
-      <button type="button" class="burger__close">
+      <button type="button" class="burger__close" data-menu-close>
         <svg class="burger__close--img" width="20px" height="20px">
           <use class="svg" href="./images/sprite.svg#close-black"></use>
         </svg>
@@ -722,5 +722,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
