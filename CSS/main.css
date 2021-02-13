@@ -420,12 +420,17 @@ textarea {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 768px) {
+  .backdrop-window {
+    overflow: visible;
+    height: 100%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .backdrop-window {
     max-height: 581px;
     max-width: 528px;
-    overflow: visible;
-    height: 100%;
   }
 }
 
